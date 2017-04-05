@@ -23,28 +23,14 @@ function initJSContentManager() {
                 //var toLoad = hash+'?ajax=on';
                 var toLoad = hash + '.html?ajax=on';
 
+                $(".acontainer").hide();
 
-
-
-                $(".text").hide("drop", {
-        direction: "right" 
-    }, 1000); 
-
-
-
-                $('.text').delay(100).queue(function( nxt ) {
-                    //	$("#xcontent").hide("blind", { direction: "vertical" }, 300);
+                $('.acontainer').delay(100).queue(function( nxt ) {
                     $(this).load(toLoad, function() 
                     {
 
-                        $(".text").show("drop", {
-                            direction: "right" 
-                        }, 1000);
-						
-						xaInitialize();
-                        // $.scrollTo("#xcontent",600,{queue:true}); 
-                      // xaInitialize(); // $("#xcontent").show("blind", { direction: "vertical" }, 200);
-                        //jQuery(newElements).find('audio,video').mediaelementplayer();	
+                        $(".acontainer").show();
+		       
                     });
 
                     // Hier andere einsetzen
@@ -65,18 +51,10 @@ function initJSContentManager() {
 $(document).ready(function() { 
 
 
-// KLXM AJAX-LOADER FOR REDAXO
-
-
-
-
-
-
-
     initJSContentManager();
    
 
-    $('#navi ul li ul li a').click(function() {
+    $('#navi a').click(function() {
 
 
 
